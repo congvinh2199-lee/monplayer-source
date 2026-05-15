@@ -4,8 +4,8 @@
     {
       "id": "hoiquantv",
       "name": "HoiquanTV",
-      "version": "1.0.0",
-      "scriptUrl": "https://raw.githubusercontent.com/congvinh2199-lee/monplayer-source/refs/heads/main/plugins/hoiquantv_plugin.js",
+      "version": "1.0.2",
+      "scriptUrl": "https://raw.githubusercontent.com/congvinh2199-lee/monplayer-source/main/plugins/hoiquantv_plugin.js?ver=102",
       "iconUrl": "https://hoiquantv.site/favicon.ico"
     }
   ]
