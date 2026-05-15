@@ -1,14 +1,15 @@
 var BASE_URL = "https://hoiquantv.site";
 var MATCH_URL = "https://hoiquantv.site/truc-tiep/shenzhen-2028-vs-shaanxi-union-luc-1500-ngay-15-05-2026-69759igxrp5fgk2";
-var DATA_URL = "https://raw.githubusercontent.com/congvinh2199-lee/monplayer-source/main/plugins.json?ver=200";
+var DATA_URL = "https://raw.githubusercontent.com/congvinh2199-lee/monplayer-source/main/plugins.json?ver=1000";
+var ICON_URL = "https://raw.githubusercontent.com/youngbi/repo/main/plugins/ophim.ico";
 
 function getManifest() {
     return JSON.stringify({
-        id: "hoiquantv2",
-        name: "HoiquanTV 2",
-        version: "2.0.0",
+        id: "hoiquantv_match",
+        name: "HoiquanTV - Shenzhen vs ShaanXi",
+        version: "10.0.0",
         baseUrl: BASE_URL,
-        iconUrl: BASE_URL + "/favicon.ico",
+        iconUrl: ICON_URL,
         isEnabled: true,
         isAdult: false,
         type: "MOVIE",
@@ -20,10 +21,10 @@ function getManifest() {
 function getHomeSections() {
     return JSON.stringify([
         {
-            slug: "live",
-            title: "Trực tiếp HoiquanTV",
+            slug: "phim-moi",
+            title: "Trận đang xem",
             type: "Grid",
-            path: "live"
+            path: "danh-sach"
         }
     ]);
 }
@@ -31,8 +32,8 @@ function getHomeSections() {
 function getPrimaryCategories() {
     return JSON.stringify([
         {
-            name: "Trực tiếp",
-            slug: "live"
+            name: "Trận đang xem",
+            slug: "phim-moi"
         }
     ]);
 }
@@ -52,7 +53,7 @@ function getUrlSearch(keyword, filtersJson) {
 }
 
 function getUrlDetail(slug) {
-    return MATCH_URL;
+    return DATA_URL;
 }
 
 function getUrlCategories() {
@@ -71,15 +72,15 @@ function parseListResponse(responseText) {
     return JSON.stringify({
         items: [
             {
-                id: "shenzhen-2028-vs-shaanxi-union",
+                id: "match_shenzhen_shaanxi",
                 title: "Shenzhen 2028 vs ShaanXi Union",
-                posterUrl: BASE_URL + "/favicon.ico",
-                backdropUrl: BASE_URL + "/favicon.ico",
-                description: "Trực tiếp Shenzhen 2028 vs ShaanXi Union lúc 15:00 ngày 15-05-2026 trên HoiquanTV.",
+                posterUrl: ICON_URL,
+                backdropUrl: ICON_URL,
+                description: "Bấm vào để mở trận Shenzhen 2028 vs ShaanXi Union trên HoiquanTV.",
                 year: 2026,
                 quality: "HD",
                 episode_current: "LIVE",
-                lang: "BLV"
+                lang: "WebView"
             }
         ],
         pagination: {
@@ -95,20 +96,20 @@ function parseSearchResponse(responseText) {
     return parseListResponse(responseText);
 }
 
-function parseMovieDetail(html) {
+function parseMovieDetail(responseText) {
     return JSON.stringify({
-        id: "shenzhen-2028-vs-shaanxi-union",
+        id: "match_shenzhen_shaanxi",
         title: "Shenzhen 2028 vs ShaanXi Union",
-        posterUrl: BASE_URL + "/favicon.ico",
-        backdropUrl: BASE_URL + "/favicon.ico",
-        description: "Bấm tập bên dưới để mở trang xem trực tiếp bằng WebView.",
+        posterUrl: ICON_URL,
+        backdropUrl: ICON_URL,
+        description: "Bấm nút xem bên dưới để mở link trận đấu bằng WebView.",
         year: 2026,
         rating: 0,
         quality: "HD",
         episode_current: "LIVE",
-        lang: "BLV",
+        lang: "WebView",
         category: "Bóng đá",
-        country: "Trung Quốc",
+        country: "",
         director: "",
         casts: "Shenzhen 2028, ShaanXi Union",
         status: "LIVE",
@@ -128,10 +129,10 @@ function parseMovieDetail(html) {
     });
 }
 
-function parseDetailResponse(html) {
+function parseDetailResponse(responseText) {
     return JSON.stringify({
         url: MATCH_URL,
-        isEmbed: true,
+        isEmbed: false,
         mimeType: "",
         headers: {
             "User-Agent": "Mozilla/5.0",
@@ -141,7 +142,7 @@ function parseDetailResponse(html) {
     });
 }
 
-function parseEmbedResponse(html, sourceUrl) {
+function parseEmbedResponse(responseText, sourceUrl) {
     return JSON.stringify({
         url: sourceUrl || MATCH_URL,
         isEmbed: false,
@@ -152,4 +153,21 @@ function parseEmbedResponse(html, sourceUrl) {
         },
         subtitles: []
     });
+}
+
+function parseCategoriesResponse(responseText) {
+    return JSON.stringify([
+        {
+            name: "Trận đang xem",
+            slug: "phim-moi"
+        }
+    ]);
+}
+
+function parseCountriesResponse(responseText) {
+    return JSON.stringify([]);
+}
+
+function parseYearsResponse(responseText) {
+    return JSON.stringify([]);
 }
