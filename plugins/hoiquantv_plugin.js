@@ -1,12 +1,12 @@
 var BASE_URL = "https://hoiquantv.site";
 var MATCH_URL = "https://hoiquantv.site/truc-tiep/shenzhen-2028-vs-shaanxi-union-luc-1500-ngay-15-05-2026-69759igxrp5fgk2";
-var DATA_URL = "https://raw.githubusercontent.com/congvinh2199-lee/monplayer-source/main/plugins.json?ver=103";
+var DATA_URL = "https://raw.githubusercontent.com/congvinh2199-lee/monplayer-source/main/plugins.json?ver=200";
 
 function getManifest() {
     return JSON.stringify({
-        id: "hoiquantv",
-        name: "HoiquanTV",
-        version: "1.0.3",
+        id: "hoiquantv2",
+        name: "HoiquanTV 2",
+        version: "2.0.0",
         baseUrl: BASE_URL,
         iconUrl: BASE_URL + "/favicon.ico",
         isEnabled: true,
@@ -23,7 +23,7 @@ function getHomeSections() {
             slug: "live",
             title: "Trực tiếp HoiquanTV",
             type: "Grid",
-            path: "danh-sach"
+            path: "live"
         }
     ]);
 }
@@ -73,8 +73,8 @@ function parseListResponse(responseText) {
             {
                 id: "shenzhen-2028-vs-shaanxi-union",
                 title: "Shenzhen 2028 vs ShaanXi Union",
-                posterUrl: "https://hoiquantv.site/favicon.ico",
-                backdropUrl: "",
+                posterUrl: BASE_URL + "/favicon.ico",
+                backdropUrl: BASE_URL + "/favicon.ico",
                 description: "Trực tiếp Shenzhen 2028 vs ShaanXi Union lúc 15:00 ngày 15-05-2026 trên HoiquanTV.",
                 year: 2026,
                 quality: "HD",
@@ -99,8 +99,8 @@ function parseMovieDetail(html) {
     return JSON.stringify({
         id: "shenzhen-2028-vs-shaanxi-union",
         title: "Shenzhen 2028 vs ShaanXi Union",
-        posterUrl: "https://hoiquantv.site/favicon.ico",
-        backdropUrl: "",
+        posterUrl: BASE_URL + "/favicon.ico",
+        backdropUrl: BASE_URL + "/favicon.ico",
         description: "Bấm tập bên dưới để mở trang xem trực tiếp bằng WebView.",
         year: 2026,
         rating: 0,
