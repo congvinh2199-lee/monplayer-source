@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "plugins": [
+    {
+      "id": "hoiquantv",
+      "name": "HoiquanTV",
+      "version": "1.0.0",
+      "scriptUrl": "https://raw.githubusercontent.com/<USERNAME>/<REPO>/main/plugins/hoiquantv_plugin.js",
+      "iconUrl": "https://hoiquantv.site/favicon.ico"
+    }
+  ]
+}
