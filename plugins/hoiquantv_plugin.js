@@ -35,18 +35,20 @@ function getManifest() {
 
 function getHomeSections() {
     return toJson([
-        { id: "home", title: "HoiquanTV", type: "list" },
-        { id: "live", title: "Trực tiếp bóng đá", type: "list" }
+        { slug: "home", title: "HoiquanTV", type: "Horizontal", path: "" },
+        { slug: "live", title: "Trực tiếp bóng đá", type: "Horizontal", path: "" },
+        { slug: "schedule", title: "Lịch thi đấu", type: "Horizontal", path: "" },
+        { slug: "result", title: "Kết quả bóng đá", type: "Horizontal", path: "" }
     ]);
 }
 
 function getPrimaryCategories() {
     return toJson([
-        { id: "home", name: "Trang chủ" },
-        { id: "live", name: "Đang live / Hôm nay" },
-        { id: "schedule", name: "Lịch thi đấu" },
-        { id: "ranking", name: "Bảng xếp hạng" },
-        { id: "result", name: "Kết quả bóng đá" }
+        { name: "Trang chủ", slug: "home" },
+        { name: "Đang live / Hôm nay", slug: "live" },
+        { name: "Lịch thi đấu", slug: "schedule" },
+        { name: "Bảng xếp hạng", slug: "ranking" },
+        { name: "Kết quả bóng đá", slug: "result" }
     ]);
 }
 
