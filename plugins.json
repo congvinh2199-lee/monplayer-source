@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "plugins": [
     {
-      "id": "hoiquantv",
-      "name": "HoiquanTV",
-      "version": "1.0.3",
-      "scriptUrl": "https://raw.githubusercontent.com/congvinh2199-lee/monplayer-source/main/plugins/hoiquantv_plugin.js?ver=103",
+      "id": "hoiquantv2",
+      "name": "HoiquanTV 2",
+      "version": "2.0.0",
+      "scriptUrl": "https://raw.githubusercontent.com/congvinh2199-lee/monplayer-source/main/plugins/hoiquantv_plugin.js?ver=200",
       "iconUrl": "https://hoiquantv.site/favicon.ico"
     }
   ]
