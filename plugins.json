@@ -1,12 +1,12 @@
 {
-  "version": 2,
+  "version": 10,
   "plugins": [
     {
-      "id": "hoiquantv2",
-      "name": "HoiquanTV 2",
-      "version": "2.0.0",
-      "scriptUrl": "https://raw.githubusercontent.com/congvinh2199-lee/monplayer-source/main/plugins/hoiquantv_plugin.js?ver=200",
-      "iconUrl": "https://hoiquantv.site/favicon.ico"
+      "id": "hoiquantv_match",
+      "name": "HoiquanTV - Shenzhen vs ShaanXi",
+      "version": "10.0.0",
+      "scriptUrl": "https://raw.githubusercontent.com/congvinh2199-lee/monplayer-source/main/plugins/hoiquantv_plugin.js?ver=1000",
+      "iconUrl": "https://raw.githubusercontent.com/youngbi/repo/main/plugins/ophim.ico"
     }
   ]
 }
